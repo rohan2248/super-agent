@@ -29,8 +29,8 @@ export * from "./enums"
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Tests
- * const tests = await prisma.test.findMany()
+ * // Fetch zero or more Users
+ * const users = await prisma.user.findMany()
  * ```
  * 
  * Read more in our [docs](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client).
@@ -44,11 +44,6 @@ export { Prisma }
 path.join(__dirname, "query_engine-windows.dll.node")
 path.join(process.cwd(), "prisma/lib/generated/prisma/query_engine-windows.dll.node")
 
-/**
- * Model Test
- * 
- */
-export type Test = Prisma.TestModel
 /**
  * Model User
  * 
@@ -69,3 +64,23 @@ export type Account = Prisma.AccountModel
  * 
  */
 export type Verification = Prisma.VerificationModel
+/**
+ * Model CorsairIntegration
+ * 
+ */
+export type CorsairIntegration = Prisma.CorsairIntegrationModel
+/**
+ * Model CorsairAccount
+ * 
+ */
+export type CorsairAccount = Prisma.CorsairAccountModel
+/**
+ * Model CorsairEntity
+ * 
+ */
+export type CorsairEntity = Prisma.CorsairEntityModel
+/**
+ * Model CorsairEvent
+ * 
+ */
+export type CorsairEvent = Prisma.CorsairEventModel
