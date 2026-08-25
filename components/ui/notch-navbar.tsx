@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils";
 const NAV_ITEMS = [
   { label: "How it works", href: "#about" },
   { label: "Capabilities", href: "#features" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Sign in", href: "/sign-in" },
 ] as const;
 
@@ -36,7 +37,9 @@ export function NotchNavbar({ className }: { className?: string }) {
         className,
       )}
     >
-      <ul className="flex items-center gap-3 sm:gap-6 md:gap-12 lg:gap-14">
+      {/* Gaps tightened at the small end to fit a fourth item without the pill
+          overflowing a 360px viewport. */}
+      <ul className="flex items-center gap-2.5 sm:gap-5 md:gap-10 lg:gap-14">
         {NAV_ITEMS.map((item) => (
           <li key={item.label}>
             <Link
