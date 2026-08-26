@@ -43,7 +43,7 @@ export function Hero() {
                 className="text-[26vw] font-medium leading-[0.85] tracking-[-0.07em] sm:text-[24vw] md:text-[22vw] lg:text-[20vw] xl:text-[19vw] 2xl:text-[20vw]"
                 style={{ color: CREAM }}
               >
-                <WordsPullUp text="Vela" showAsterisk />
+                <WordsPullUp text="Vela" />
               </h1>
             </div>
 
@@ -56,9 +56,9 @@ export function Hero() {
                 style={{ lineHeight: 1.2 }}
               >
                 Vela is an agent that lives inside your mail and calendar —
-                reading every thread, holding every commitment, surfacing the one
-                message you half-remember. It drafts and it schedules, but it
-                never sends a word without your say-so.
+                reading every thread, holding every commitment, surfacing the
+                one message you half-remember. It drafts and it schedules, but
+                it never sends a word without your say-so.
               </motion.p>
 
               <motion.div

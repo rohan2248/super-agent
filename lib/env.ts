@@ -21,10 +21,6 @@ function optional(name: string): string | undefined {
 }
 
 export const env = {
-  get databaseUrl() {
-    return required("DATABASE_URL");
-  },
-
   /**
    * Neon serves DATABASE_URL through a `-pooler` (PgBouncer, transaction mode)
    * endpoint, which silently does not support LISTEN/NOTIFY. Set this to the
@@ -38,10 +34,6 @@ export const env = {
 
   get corsairKek() {
     return required("CORSAIR_KEK");
-  },
-
-  get anthropicApiKey() {
-    return required("ANTHROPIC_API_KEY");
   },
 
   get appUrl() {

@@ -178,15 +178,6 @@ export async function startGmailWatch(
   );
 }
 
-export async function stopGmailWatch(tenantId: string): Promise<void> {
-  await googleFetch(
-    tenantId,
-    "gmail",
-    "https://gmail.googleapis.com/gmail/v1/users/me/stop",
-    { method: "POST" },
-  );
-}
-
 export type CalendarWatchResult = {
   id: string;
   resourceId: string;

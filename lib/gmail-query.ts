@@ -267,11 +267,3 @@ export function parseGmailQuery(query: string): SearchFilters {
 
   return filters;
 }
-
-/** Convenience for callers that accept either shape. */
-export function toQueryString(
-  input: string | SearchFilters | undefined,
-): string {
-  if (!input) return "";
-  return typeof input === "string" ? input : buildGmailQuery(input);
-}

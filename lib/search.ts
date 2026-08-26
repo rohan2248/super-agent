@@ -1,6 +1,6 @@
 import { pool } from "@/lib/db";
 import { getEmbeddingProvider, toVectorLiteral } from "@/lib/embeddings";
-import { buildGmailQuery, type SearchFilters } from "@/lib/gmail-query";
+import type { SearchFilters } from "@/lib/gmail-query";
 import type { TenantClient } from "@/lib/tenant";
 
 /**
@@ -327,9 +327,4 @@ export async function searchCalendar(
     htmlLink: event.htmlLink ?? null,
     hangoutLink: event.hangoutLink ?? null,
   }));
-}
-
-/** Convenience for callers that hold filters rather than a query string. */
-export function filtersToQuery(filters: SearchFilters): string {
-  return buildGmailQuery(filters);
 }

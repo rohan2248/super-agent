@@ -5,7 +5,6 @@ import { Loader2, Plug, RadioTower, TriangleAlert } from "lucide-react";
 
 import { apiFetch, type CorsairStatus } from "@/lib/api-types";
 import type { WatchResult } from "@/app/api/corsair/watch/route";
-import { cn } from "@/lib/utils";
 
 const PLUGIN_LABEL: Record<string, string> = {
   gmail: "Gmail",
@@ -126,17 +125,5 @@ export function ConnectionBanner() {
         </div>
       )}
     </div>
-  );
-}
-
-/** Compact per-integration push indicator for the left rail. */
-export function RealtimeDot({ active }: { active: boolean }) {
-  return (
-    <span
-      className={cn(
-        "size-1.5 rounded-full",
-        active ? "bg-emerald-400" : "bg-gray-700",
-      )}
-    />
   );
 }
